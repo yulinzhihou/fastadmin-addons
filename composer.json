@@ -1,7 +1,7 @@
 {
     "name": "yulinzhihou/fastadmin-addons",
     "description": "based on fastadmin framework then update syntax to compatible ThinkPHP 5.1.*",
-    "type": "php",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
