@@ -1,0 +1,31 @@
+{
+    "name": "yulinzhihou/fastadmin-addons",
+    "description": "based on fastadmin framework then update syntax to compatible ThinkPHP 5.1.*",
+    "type": "php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yulinzhihou",
+            "email": "841088704@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "topthink/think-helper": ">=1.0.4",
+        "topthink/think-installer": ">=1.0.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\": "src/"
+        },
+        "files": [
+            "src/common.php"
+        ]
+    },
+    "extra": {
+        "think-config": {
+            "addons": "src/config.php"
+        }
+    }
+}
