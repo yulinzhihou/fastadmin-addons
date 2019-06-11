@@ -3,6 +3,7 @@
     "description": "based on fastadmin framework then update syntax to compatible ThinkPHP 5.1.*",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "yulinzhihou",
@@ -12,8 +13,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "topthink/think-helper": ">=1.0.4",
-        "topthink/think-installer": ">=1.0.10"
+        "topthink/think-helper": "~1.0.4",
+        "topthink/think-installer": "~1.0.10"
     },
     "autoload": {
         "psr-4": {
