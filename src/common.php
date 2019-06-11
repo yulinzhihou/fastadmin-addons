@@ -1,6 +1,6 @@
 <?php
 
-use think\App;
+use think\facade\App;
 use think\facade\Cache;
 use think\facade\Config;
 use think\Exception;
@@ -10,9 +10,6 @@ use think\Loader;
 use think\facade\Route;
 // 插件目录
 define('ADDON_PATH', Env::get('root_path') . 'addons' . DIRECTORY_SEPARATOR);
-//$appPath = (new App())->getAppPath();
-//$addons_path = dirname($appPath).DIRECTORY_SEPARATOR.'addons'.DIRECTORY_SEPARATOR;
-//\think\facade\Env::set('addons_path',$addons_path);
 
 // 定义路由
 Route::any('addons/:addon/[:controller]/[:action]', "\\think\\addons\\Route@execute");
@@ -326,7 +323,7 @@ function addon_url($url, $vars = [], $suffix = true, $domain = false)
     }
     $val = "@addons/{$url}";
     $config = get_addon_config($addon);
-    $dispatch = Request()->dispatch;
+    $dispatch = (array)Request()::instance()->dispatch();
     $indomain = isset($dispatch['var']['indomain']) && $dispatch['var']['indomain'] ? true : false;
     $domainprefix = $config && isset($config['domain']) && $config['domain'] ? $config['domain'] : '';
     $rewrite = $config && isset($config['rewrite']) && $config['rewrite'] ? $config['rewrite'] : [];
